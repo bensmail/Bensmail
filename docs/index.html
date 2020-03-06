@@ -149,6 +149,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/core/ui/PageTemplate</li>
+
 <li>$:/core/ui/ViewTemplate/title</li>
 
 <li>$:/core/wiki/title</li>
@@ -418,6 +420,8 @@ Error message and password prompt
 <li>pics</li>
 
 <li>Sky Cloud Blue</li>
+
+<li>skyview</li>
 
 <li>whiteroom</li>
 
@@ -9663,6 +9667,62 @@ exports.startup = function() {
     }
 }</pre>
 </div>
+<div created="20200306070029908" modified="20200306070515235" title="$:/core/ui/PageTemplate">
+<pre>\whitespace trim
+\define containerClasses()
+tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
+\end
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value={{$:/config/Toolbar/Icons}}&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value={{$:/config/Toolbar/Text}}&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value={{$:/config/Toolbar/ButtonClass}}&gt;
+
+&lt;$set name=&quot;tv-show-missing-links&quot; value={{$:/config/MissingLinks}}&gt;
+
+&lt;$set name=&quot;storyviewTitle&quot; value={{$:/view}}&gt;
+
+&lt;$set name=&quot;languageTitle&quot; value={{{ [{$:/language}get[name]] }}}&gt;
+
+&lt;div class=&lt;&lt;containerClasses&gt;&gt;&gt;
+
+&lt;$navigator story=&quot;$:/StoryList&quot; history=&quot;$:/HistoryList&quot; openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}&gt;
+
+&lt;$dropzone&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt;
+
+&lt;/$list&gt;
+
+&lt;/$dropzone&gt;
+
+&lt;/$navigator&gt;
+
+&lt;/div&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+Background credit to:
+
+&lt;a style=&quot;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px&quot; href=&quot;https://unsplash.com/@wirhabenzeit?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;Download free do whatever you want high-resolution photos from Dominik Schröder&quot;&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;title&gt;unsplash-logo&lt;/title&gt;&lt;path d=&quot;M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;Dominik Schröder&lt;/span&gt;&lt;/a&gt;
+
+
+</pre>
+</div>
 <div created="20200211163951037" modified="20200211164043006" tags="$:/tags/ViewTemplate" title="$:/core/ui/ViewTemplate/title">
 <pre>\define title-styles()
 fill:$(foregroundColor)$;
@@ -9853,11 +9913,11 @@ very-muted-foreground: #888888
 <div created="20200306060752716" modified="20200306060752716" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200211163123905" modified="20200306064723065" title="$:/state/sidebar">
+<div created="20200211163123905" modified="20200306070553840" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200211163442472" modified="20200306061724209" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div created="20200211163442472" modified="20200306070006893" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20200211162550841" modified="20200306064604107" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
@@ -9871,14 +9931,14 @@ very-muted-foreground: #888888
 <div created="20200211162454501" modified="20200306064601481" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20200211162722491" modified="20200306061525255" title="$:/state/tab/sidebar--595412856">
+<div created="20200211162722491" modified="20200306070410629" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div created="20200306064558100" list="[[Ben's Mail]]" modified="20200306064653480" title="$:/StoryList">
+<div created="20200306065324084" list="[[Ben's Mail]]" modified="20200306070414419" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200211162729445" modified="20200306061822708" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20200211162729445" modified="20200306070003193" title="$:/temp/advancedsearch">
+<pre>pagetem</pre>
 </div>
 <div created="20200211162603840" modified="20200211162603840" title="$:/temp/HidePluginWarning">
 <pre>yes</pre>
@@ -10697,7 +10757,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200211162503262" dependents="" description="Basic theme" modified="20200211162503262" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200211163433490" modified="20200306061431166" title="$:/temp/search">
+<div created="20200211163433490" modified="20200306070113529" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200211162503249" modified="20200211162503249" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
@@ -10867,8 +10927,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200306064656846" modified="20200306064702188" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fixed-fluid</pre>
 </div>
-<div created="20200211175506228" modified="20200306064610806" title="$:/themes/tiddlywiki/vanilla/settings/backgroundimage">
-<pre>whiteroom</pre>
+<div created="20200211175506228" modified="20200306065708139" title="$:/themes/tiddlywiki/vanilla/settings/backgroundimage">
+<pre>skyview</pre>
 </div>
 <div created="20200306064616132" modified="20200306064630650" title="$:/themes/tiddlywiki/vanilla/settings/backgroundimageattachment">
 <pre>fixed</pre>
@@ -10899,10 +10959,15 @@ margin-bottom: 28px;
 
 </pre>
 </div>
-<div created="20200306064230992" modified="20200306064305008" tags="" title="pics">
-<pre>&lt;a style=&quot;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px&quot; href=&quot;https://unsplash.com/@richy_roll?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;Download free do whatever you want high-resolution photos from R_ R&quot;&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;title&gt;unsplash-logo&lt;/title&gt;&lt;path d=&quot;M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;R_ R&lt;/span&gt;&lt;/a&gt;</pre>
+<div created="20200306064230992" modified="20200306065333972" tags="" title="pics">
+<pre>&lt;a style=&quot;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px&quot; href=&quot;https://unsplash.com/@richy_roll?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;Download free do whatever you want high-resolution photos from R_ R&quot;&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;title&gt;unsplash-logo&lt;/title&gt;&lt;path d=&quot;M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;R_ R&lt;/span&gt;&lt;/a&gt;
+
+&lt;a style=&quot;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px&quot; href=&quot;https://unsplash.com/@wirhabenzeit?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;Download free do whatever you want high-resolution photos from Dominik Schröder&quot;&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;title&gt;unsplash-logo&lt;/title&gt;&lt;path d=&quot;M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;Dominik Schröder&lt;/span&gt;&lt;/a&gt;</pre>
 </div>
 <div _canonical_uri="./sky-1513292_1280.png" created="20200211175221418" modified="20200211175725520" tags="" title="Sky Cloud Blue" type="image/png">
+<pre></pre>
+</div>
+<div _canonical_uri="./pics/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg" created="20200306065620686" modified="20200306065653292" tags="" title="skyview" type="image/jpeg">
 <pre></pre>
 </div>
 <div _canonical_uri="./pics/r_-r-2_BZuGgkP4k-unsplash.jpg" created="20200306064346953" modified="20200306064551288" tags="" title="whiteroom" type="image/jpeg">
