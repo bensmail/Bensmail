@@ -155,13 +155,19 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/palette</li>
 
+<li>$:/palettes/bensmail</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/state/ShowPaletteEditor</li>
 
 <li>$:/state/sidebar</li>
 
@@ -417,7 +423,7 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20200211162823197" modified="20200211162943071" module-type="startup" tags="" title="$:/.tb/modules/startup/hide-sidebar.js" type="application/javascript">
+<div created="20151010151732122" creator="Tobias Beer" modified="20151010151750739" module-type="startup" revision="0" title="$:/.tb/modules/startup/hide-sidebar.js" type="application/javascript">
 <pre>/*\
 title: $:/.tb/modules/startup/hide-sidebar.js
 type: application/javascript
@@ -450,8 +456,8 @@ exports.startup = function() {
 
 })();</pre>
 </div>
-<div created="20200211163041534" modified="20200211163320148" tags="" title="$:/config/HideSidebarOnStartup" type="text/vnd.tiddlywiki">
-<pre>no</pre>
+<div created="20200211163041534" modified="20200306061809439" tags="" title="$:/config/HideSidebarOnStartup" type="text/vnd.tiddlywiki">
+<pre>yes</pre>
 </div>
 <div created="20200211163550241" modified="20200211163607224" title="$:/config/Toolbar/Text">
 <pre>no</pre>
@@ -9697,11 +9703,132 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <pre>[[Ben's Mail]]
 [list[$:/StoryList]]</pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[$:/.tb/modules/startup/hide-sidebar.js]]</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200211175751959" modified="20200211180504398" title="$:/palette">
-<pre>$:/palettes/Vanilla</pre>
+<div created="20200211175751959" modified="20200306060859811" title="$:/palette">
+<pre>$:/palettes/bensmail</pre>
+</div>
+<div created="20200306060755501" description="custom for bensmail" modified="20200306060850887" name="Bensmail" tags="$:/tags/Palette" title="$:/palettes/bensmail" type="application/x-tiddler-dictionary">
+<pre>alert-background: #ffe476
+alert-border: #b99e2f
+alert-highlight: #881122
+alert-muted-foreground: #b99e2f
+background: #ffffff
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-background:
+button-foreground:
+button-border:
+code-background: #f7f7f9
+code-border: #e1e1e8
+code-foreground: #dd1144
+diff-delete-background: #ffc9c9
+diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-equal-background: 
+diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-insert-background: #aaefad
+diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-invisible-background: 
+diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: #ff0000
+download-background: #34c734
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: &lt;&lt;colour background&gt;&gt;
+dropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;
+dropdown-tab-background-selected: #fff
+dropdown-tab-background: #ececec
+dropzone-background: rgba(0,200,0,0.7)
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: #0000aa
+external-link-foreground: #0000ee
+foreground: #333333
+message-background: #ecf2ff
+message-border: #cfd6e6
+message-foreground: #547599
+modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: #999999
+modal-footer-background: #f5f5f5
+modal-footer-border: #dddddd
+modal-header-border: #eeeeee
+muted-foreground: #bbb
+notification-background: #ffffdd
+notification-border: #999999
+page-background: #f4f4f4
+pre-background: #f5f5f5
+pre-border: #cccccc
+primary: #5778d8
+select-tag-background:
+select-tag-foreground:
+sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-controls-foreground-hover: #000000
+sidebar-controls-foreground: #aaaaaa
+sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+sidebar-foreground: #acacac
+sidebar-muted-foreground-hover: #444444
+sidebar-muted-foreground: #c0c0c0
+sidebar-tab-background-selected: #f4f4f4
+sidebar-tab-background: #e0e0e0
+sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
+sidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;
+sidebar-tab-divider: #e4e4e4
+sidebar-tab-foreground-selected:
+sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: #444444
+sidebar-tiddler-link-foreground: #999999
+site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
+static-alert-foreground: #aaaaaa
+tab-background-selected: #ffffff
+tab-background: #d8d8d8
+tab-border-selected: #d8d8d8
+tab-border: #cccccc
+tab-divider: #d8d8d8
+tab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;
+tab-foreground: #666666
+table-border: #dddddd
+table-footer-background: #a8a8a8
+table-header-background: #f0f0f0
+tag-background: #ec6
+tag-foreground: #ffffff
+tiddler-background: &lt;&lt;colour background&gt;&gt;
+tiddler-border: &lt;&lt;colour background&gt;&gt;
+tiddler-controls-foreground-hover: #888888
+tiddler-controls-foreground-selected: #444444
+tiddler-controls-foreground: #cccccc
+tiddler-editor-background: #f8f8f8
+tiddler-editor-border-image: #ffffff
+tiddler-editor-border: #cccccc
+tiddler-editor-fields-even: #e0e8e0
+tiddler-editor-fields-odd: #f0f4f0
+tiddler-info-background: #f8f8f8
+tiddler-info-border: #dddddd
+tiddler-info-tab-background: #f8f8f8
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: #c0c0c0
+tiddler-title-foreground: #182955
+toolbar-new-button:
+toolbar-options-button:
+toolbar-save-button:
+toolbar-info-button:
+toolbar-edit-button:
+toolbar-close-button:
+toolbar-delete-button:
+toolbar-cancel-button:
+toolbar-done-button:
+untagged-background: #999999
+very-muted-foreground: #888888
+</pre>
 </div>
 <div created="20200211162054370" modified="20200211162108203" title="$:/SiteSubtitle">
 <pre></pre>
@@ -9709,14 +9836,17 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200211162042641" modified="20200211164119029" title="$:/SiteTitle">
 <pre>Ben's Mail</pre>
 </div>
-<div created="20200211163123905" modified="20200306060243417" title="$:/state/sidebar">
+<div created="20200306060752716" modified="20200306060752716" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200211163442472" modified="20200211164049431" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20200211163123905" modified="20200306061658134" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
-<div created="20200211162550841" modified="20200211180509893" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20200211163442472" modified="20200306061724209" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
+</div>
+<div created="20200211162550841" modified="20200306060743419" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20200211162456342" modified="20200211162456342" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
@@ -9724,17 +9854,17 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200211162503631" modified="20200211162503631" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20200211162454501" modified="20200211175501487" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200211162454501" modified="20200306061504339" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20200211162722491" modified="20200306060313626" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20200211162722491" modified="20200306061525255" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div list="[[Ben's Mail]]" title="$:/StoryList">
+<div created="20200306061712405" list="[[Ben's Mail]]" modified="20200306061756754" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200211162729445" modified="20200211181724739" title="$:/temp/advancedsearch">
-<pre>vanilla</pre>
+<div created="20200211162729445" modified="20200306061822708" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div created="20200211162603840" modified="20200211162603840" title="$:/temp/HidePluginWarning">
 <pre>yes</pre>
@@ -10553,7 +10683,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200211162503262" dependents="" description="Basic theme" modified="20200211162503262" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
 </div>
-<div created="20200211163433490" modified="20200211180604395" title="$:/temp/search">
+<div created="20200211163433490" modified="20200306061431166" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200211162503249" modified="20200211162503249" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
@@ -10738,8 +10868,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div _canonical_uri="kumiko-shimizu-lNxMcE8mvIM-unsplash.jpg" created="20200211180416966" modified="20200211180431779" tags="" title="kumiko-shimizu-lNxMcE8mvIM-unsplash.jpg" type="image/jpeg">
 <pre></pre>
 </div>
-<div created="20200211163129564" modified="20200211182502817" tags="$:/tags/Stylesheet" title="mystyles">
-<pre>.tc-tiddler-frame { background-color: rgba(255,255,255,0.8); 
+<div created="20200211163129564" modified="20200306061356019" tags="$:/tags/Stylesheet" title="mystyles">
+<pre>.tc-tiddler-frame { background-color: rgba(255,255,255,0.1); 
 border: none; 
 border-radius: 5px;
 margin-bottom: 28px;
