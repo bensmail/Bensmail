@@ -9704,7 +9704,7 @@ exports.startup = function() {
     }
 }</pre>
 </div>
-<div created="20200306103751104" modified="20200306161526842" title="$:/core/ui/PageTemplate">
+<div created="20200306103751104" modified="20200306163133107" title="$:/core/ui/PageTemplate">
 <pre>\whitespace trim
 \define containerClasses()
 tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
@@ -9743,7 +9743,16 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 
 &lt;$navigator story=&quot;$:/StoryList&quot; history=&quot;$:/HistoryList&quot; openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}&gt;
 &lt;div&gt;
-Powered by&amp;nbsp;   [ext[Tiddlywiki|https://tiddlywiki.com/]] &lt;br&gt;
+Powered &amp;nbsp;
+
+&lt;$reveal state=&quot;$:/state/sidebar&quot; type=&quot;nomatch&quot; text=&quot;no&quot;&gt;
+&lt;$button set=&quot;$:/state/sidebar&quot; setTo=&quot;no&quot; tooltip={{$:/language/Buttons/HideSideBar/Hint}} aria-label={{$:/language/Buttons/HideSideBar/Caption}} class=&quot;tc-btn-invisible&quot;&gt;by&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&quot;$:/state/sidebar&quot; type=&quot;match&quot; text=&quot;no&quot;&gt;
+&lt;$button set=&quot;$:/state/sidebar&quot; setTo=&quot;yes&quot; tooltip={{$:/language/Buttons/ShowSideBar/Hint}} aria-label={{$:/language/Buttons/ShowSideBar/Caption}} class=&quot;tc-btn-invisible&quot;&gt;by&lt;/$button&gt;
+&lt;/$reveal&gt;
+
+&amp;nbsp;   [ext[Tiddlywiki|https://tiddlywiki.com/]] &lt;br&gt;
 [[Background Cred|Background Credit]][[it|$:/core/ui/TopBar/menu]] 
 &lt;/div&gt;
 &lt;/$navigator&gt;
@@ -9967,7 +9976,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200306060752716" modified="20200306060752716" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200211163123905" modified="20200306161547282" title="$:/state/sidebar">
+<div created="20200211163123905" modified="20200306163154789" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200306123152635" modified="20200306123152636" title="$:/state/tab--1294306341">
@@ -9994,11 +10003,11 @@ very-muted-foreground: #888888</pre>
 <div created="20200211162722491" modified="20200306110641616" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div created="20200306155634482" list="[[Ben's Mail]]" modified="20200306161548877" title="$:/StoryList">
+<div created="20200306162921580" list="[[Ben's Mail]]" modified="20200306162929109" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200211162729445" modified="20200306160928914" title="$:/temp/advancedsearch">
-<pre>pagetemplate</pre>
+<div created="20200211162729445" modified="20200306163146826" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div created="20200211162603840" modified="20200211162603840" title="$:/temp/HidePluginWarning">
 <pre>yes</pre>
@@ -10016,19 +10025,19 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/Jammer/OneDrive/cheese/website/tiddymail/docs/index.html&quot;
+            &quot;text&quot;: &quot;http://bensmail.co.uk/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;bensmail.co.uk&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;bensmail.co.uk&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;http:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -10036,7 +10045,7 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/Jammer/OneDrive/cheese/website/tiddymail/docs/index.html&quot;
+            &quot;text&quot;: &quot;/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -10044,7 +10053,7 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;http://bensmail.co.uk&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
