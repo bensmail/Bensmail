@@ -1,0 +1,17 @@
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Great+Vibes|Sacramento|ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+ 
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
+
+
