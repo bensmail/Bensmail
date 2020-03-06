@@ -1,0 +1,56 @@
+get centralised theme
+get seamless theme
+
+open centralised tiddler to edit
+
+add the line to mystyles about the
+    /*.tc-story-river .tc-subtitle{ display:none; }*/
+    /*.tc-tiddler-body { background-color: rgba(255,200,255,0.5); }*/
+    .tc-tiddler-frame { background-color: rgba(255,255,255,0.2); padding:0}
+    .tc-tiddler-frame { background-color: rgba(255,255,255,0.5); border: none; border-radius: 10px}
+    Tag it with:  $:/tags/Stylesheet
+
+Edit:
+  $:/core/wiki/title
+
+add the tiddlers to make sidebar closed upon opening:
+
+$:/config/HideSidebarOnStartup <- set to yes or no
+***************************************
+$:/.tb/modules/startup/hide-sidebar.js
+
+/*\
+title: $:/.tb/modules/startup/hide-sidebar.js
+type: application/javascript
+module-type: startup
+created: 20151010151732122
+creator: Tobias Beer
+modified: 20151010151750739
+
+Hides the sidebar on startup when the config tiddler [[$:/config/hide-sidebar-on-startup]] contains "yes"
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+// Export name and synchronous status
+exports.name = "hide-sidebar-on-startup";
+exports.platforms = ["browser"];
+exports.after = ["startup"];
+exports.synchronous = true;
+
+exports.startup = function() {
+	var conf = $tw.wiki.getTiddler("$:/config/HideSidebarOnStartup"),
+		value = (conf ? conf.getFieldString("text") : "").toLowerCase(),
+		state = value == "yes" ? "no" : "yes";
+	$tw.wiki.setText("$:/state/sidebar", "text", undefined, state);
+};
+
+})();
+
+type: application/javascript
+field: module-type: startup
+*************************************
