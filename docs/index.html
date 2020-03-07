@@ -148,6 +148,8 @@ Error message and password prompt
 
 <li>$:/config/HideSidebarOnStartup</li>
 
+<li>$:/config/Navigation/openLinkFromInsideRiver</li>
+
 <li>$:/config/RelinkOnRename</li>
 
 <li>$:/config/TiddlerInfo/Mode</li>
@@ -509,6 +511,9 @@ exports.startup = function() {
 </div>
 <div created="20200211163041534" modified="20200306061809439" tags="" title="$:/config/HideSidebarOnStartup" type="text/vnd.tiddlywiki">
 <pre>yes</pre>
+</div>
+<div created="20200307060930765" modified="20200307060930765" title="$:/config/Navigation/openLinkFromInsideRiver">
+<pre>above</pre>
 </div>
 <div created="20200306194805710" modified="20200306194805710" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
@@ -9852,7 +9857,7 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200211175751959" modified="20200306060859811" title="$:/palette">
+<div created="20200211175751959" modified="20200307060916993" title="$:/palette">
 <pre>$:/palettes/bensmail</pre>
 </div>
 <div created="20200306060755501" description="custom for bensmail" modified="20200306125903861" name="Bensmail" tags="$:/tags/Palette" title="$:/palettes/bensmail" type="application/x-tiddler-dictionary">
@@ -9996,8 +10001,8 @@ very-muted-foreground: #888888</pre>
 <div created="20200211163442472" modified="20200307055418745" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20200211162550841" modified="20200307060503950" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/StoryView</pre>
+<div created="20200211162550841" modified="20200307060906090" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20200307060427955" modified="20200307060458417" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -10011,8 +10016,8 @@ very-muted-foreground: #888888</pre>
 <div created="20200211162503631" modified="20200211162503631" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20200211162454501" modified="20200307060507249" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200211162454501" modified="20200307060924574" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20200306122847613" modified="20200306122847613" title="$:/state/tab-427913087">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
@@ -10020,7 +10025,7 @@ very-muted-foreground: #888888</pre>
 <div created="20200211162722491" modified="20200307060513537" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20200307055220002" list="[[Ben's Mail .co.uk]]" modified="20200307060548723" title="$:/StoryList">
+<div created="20200307055220002" list="[[Ben's Mail .co.uk]]" modified="20200307061116695" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200211162729445" modified="20200307055417955" title="$:/temp/advancedsearch">
@@ -11031,8 +11036,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200306121753974" modified="20200306150417405" title="$:/themes/tiddlywiki/vanilla/settings/fontfamily">
 <pre>'Josefin Sans', -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;</pre>
 </div>
-<div created="20200307060505307" modified="20200307060505307" title="$:/view">
-<pre>zoomin</pre>
+<div created="20200307060505307" modified="20200307060835397" title="$:/view">
+<pre>classic</pre>
 </div>
 <div created="20200306070837932" modified="20200306071006461" tags="" title="Background Credit">
 <pre>&lt;a style=&quot;background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px&quot; href=&quot;https://unsplash.com/@wirhabenzeit?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; title=&quot;Download free do whatever you want high-resolution photos from Dominik Schröder&quot;&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; style=&quot;height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;title&gt;unsplash-logo&lt;/title&gt;&lt;path d=&quot;M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style=&quot;display:inline-block;padding:2px 3px&quot;&gt;Dominik Schröder&lt;/span&gt;&lt;/a&gt;</pre>
