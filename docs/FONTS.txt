@@ -15,3 +15,15 @@
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
 
 
+<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">  
+
+<link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet"> 
+
+
+<link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
